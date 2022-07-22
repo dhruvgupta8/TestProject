@@ -1,0 +1,15 @@
+micronaut:
+  application:
+    name: micronautApplication
+
+kafka:
+  bootstrap:
+    servers: 192.168.1.15:9092
+
+  producers:
+    product-client:
+      value:
+        serializer: org.apache.kafka.common.serialization.StringSerializer
+      key:
+        serializer: org.apache.kafka.common.serialization.StringSerializer
+      retries: 5
